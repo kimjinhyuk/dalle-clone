@@ -77,10 +77,13 @@ const CreatePost = () => {
   return (
     <section className="max-w-7xl mx-auto">
       <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
+        <h1 className="font-extrabold text-[#222328] text-[32px]">
+          AI 작품 생성하기
+        </h1>
         <p className="mt-2 text-[#666e75] text-[16px] max-w-[800px]">
-          Create imaginative and visually stunning images through DALL-E Ai and
-          share them with the Community
+          상상력이 풍부한 작품을 OpenAI의 DALL-E 프로젝트을 이용해서 생성해 볼
+          수 있습니다. <br /> 생성한 작품은 Share 버튼을 눌러 갤러리에 포스팅
+          해보세요
         </p>
       </div>
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
@@ -128,9 +131,9 @@ const CreatePost = () => {
           <button
             type="button"
             onClick={generateImage}
-            className="text-white bg-[#5CBBBB] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className="text-white bg-[#5CBBBB] hover:bg-[#3d7979] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
-            {generatingImg ? "Generating..." : "Generate"}
+            {generatingImg ? "생성중..." : "생성하기"}
           </button>
         </div>
         <div className="mt-10">
@@ -139,10 +142,10 @@ const CreatePost = () => {
             others in the community
           </p>
           <button
-            className="mt-3 text-white bg-[#009dff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+            className="mt-3 text-white bg-[#5CBBBB] hover:bg-[#3d7979] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
             type="submit"
           >
-            {loading ? "Sharing..." : "Share with the community"}
+            {loading ? "공유중..." : "갤러리로 공유하기"}
           </button>
         </div>
       </form>
